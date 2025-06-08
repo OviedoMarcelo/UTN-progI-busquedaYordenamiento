@@ -1,7 +1,33 @@
 import time
-"""
-Este módulo de ordenamiento contiene las 3 funciones más comunes para hacer búsqueda. 
-Bubble sort, Insertion Sort y Selection Sort. Además estas funciones van a siempre imprimir por consola el tiempo
-que demoraron en hacer la búsqueda y la cantidad de elementos que tenía la lista ingresada para poder estudiar la
-eficiancia de cada algoritmo y poder compararlo.
-"""
+
+def busqueda_lineal(lista, objetivo):
+    """Búsqueda lineal (O(n)) que devuelve (índice, tiempo)"""
+    inicio = time.perf_counter()
+    
+    for i in range(len(lista)):  
+        if lista[i] == objetivo: 
+            fin = time.perf_counter()
+            return i, fin - inicio
+    
+    fin = time.perf_counter()
+    return -1, fin - inicio
+
+def busqueda_binaria(lista, objetivo):
+    """Búsqueda binaria (O(log n)) que devuelve (índice, tiempo)"""
+    inicio = time.perf_counter()
+    izquierda, derecha = 0, len(lista) - 1
+    
+    while izquierda <= derecha:
+        medio = (izquierda + derecha) // 2
+        valor_medio = lista[medio]
+        
+        if valor_medio == objetivo:
+            fin = time.perf_counter()
+            return medio, fin - inicio
+        elif valor_medio < objetivo:
+            izquierda = medio + 1
+        else:
+            derecha = medio - 1
+    
+    fin = time.perf_counter()
+    return -1, fin - inicio
