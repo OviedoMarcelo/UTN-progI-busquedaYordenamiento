@@ -10,8 +10,9 @@ import time
 
 def bubble_sort(lista):
     """
-    Función que ordena la lista con el método burbuja. 
+    Función que ordena recibida la lista con el método burbuja y devuelve una lista ordenada. 
     Comparando cada elemento con su adyacente e intercambiando si es necesario.
+    Imprime en consola el tiempo que llevó el ordenamiento y los elementos ordenados.
     """
     n = len(lista) #Obtengo el largo de la lista
     inicio = time.time() #inicializo el tiempo
@@ -29,9 +30,10 @@ def bubble_sort(lista):
 
 def insertion_sort(lista):
     """
-    Función que ordena la lista con el método de insertion. 
+    Función que ordena la lista recibida con el método de insertion y devuelve una lista ordenada. 
     Este método reconstruye la lista de forma ordenadade izquierda a derecha tomando
     1 elemento a la vez y lo colaca en la posición correcta.
+    Imprime en consola el tiempo que llevó el ordenamiento y los elementos ordenados.
     """
     n = len(lista) #Obtengo el largo de la lista
     inicio = time.time() #inicializo el tiempo
@@ -54,8 +56,9 @@ def insertion_sort(lista):
 
 def selection_sort(lista):
     """
-    Función que ordena la lista con el método de selección. 
+    Función que ordena la lista recibida con el método de selección y devuelve una lista ordenada.
     Este método selecciona el elemento más pequeño de la lista y lo coloca en la posición que le corresponde.
+    Imprime en consola el tiempo que llevó el ordenamiento y los elementos ordenados.s
     """
     n = len(lista)
     inicio = time.time() #inicializo el tiempo
