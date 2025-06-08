@@ -21,7 +21,7 @@ def bubble_sort(lista):
                 lista[j], lista[j + 1] = lista[j + 1], lista[j]
     fin = time.time() #obtengo el tiempo al finalizar el ordenamiento
     tiempo_ms = (fin - inicio) * 1000  # Convertierto la diferencia a milisegundos
-    print(f"Tiempo de ejecución bubble sort para {len} elementos: {tiempo_ms:.3f} ms")
+    print(f"Tiempo de ejecución bubble sort para {n} elementos: {tiempo_ms:.3f} ms")
     return lista
 
 
@@ -37,16 +37,16 @@ def insertion_sort(lista):
     inicio = time.time() #inicializo el tiempo
     #Inicio el recorrido
     for i in range(1, n):
-        actual = lista[i]
-        j = i - 1
-        while j >= 0 and lista[j] > actual:
-            lista[j + 1] = lista[j]
+        actual = lista[i] #Agarro el último elemento no ordenado de la lista para la primera vuelta es el elemento [1] para compara con el [0]
+        j = i - 1 #Este J equivale al último elemento ordenado de la lista
+        while j >= 0 and lista[j] > actual: #Si no me salgo del array y si el elemento anterior ordenado es mayor empiezo a desplazarlo
+            lista[j + 1] = lista[j] 
             j -= 1
-        lista[j + 1] = actual
+        lista[j + 1] = actual #una vez llegada a la posición ordenada correcta intercambio y avanzo al siguiente elemento no ordenado
     #Fin del recorrido    
     fin = time.time() #obtengo el tiempo al finalizar el ordenamiento
     tiempo_ms = (fin - inicio) * 1000  # Convertierto la diferencia a milisegundos
-    print(f"Tiempo de ejecución bubble sort para {len} elementos: {tiempo_ms:.3f} ms")
+    print(f"Tiempo de ejecución bubble sort para {n} elementos: {tiempo_ms:.3f} ms")
     return lista
 
 
@@ -60,14 +60,14 @@ def selection_sort(lista):
     n = len(lista)
     inicio = time.time() #inicializo el tiempo
     #Inicio el recorrido
-    for i in range(n):
-        min_index = i
-        for j in range(i + 1, n):
-            if lista[j] < lista[min_index]:
-                min_index = j
-        lista[i], lista[min_index] = lista[min_index], lista[i]
+    for i in range(n):  #Recorro todos los elementos del array
+        min_index = i   #Index del elemento más pequeño
+        for j in range(i + 1, n): #recorro del elemento más pequeño hasta el final
+            if lista[j] < lista[min_index]: 
+                min_index = j #Guardo el index del elemento más pequeño encontrado en recorrido
+        lista[i], lista[min_index] = lista[min_index], lista[i] #Al final algo el intercambi con el mínimo index encontrado en la vuelta
     #Fin del recorrido
     fin = time.time() #obtengo el tiempo al finalizar el ordenamiento
     tiempo_ms = (fin - inicio) * 1000  # Convertierto la diferencia a milisegundos
-    print(f"Tiempo de ejecución bubble sort para {len} elementos: {tiempo_ms:.3f} ms")
+    print(f"Tiempo de ejecución bubble sort para {n} elementos: {tiempo_ms:.3f} ms")
     return lista
