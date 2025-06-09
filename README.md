@@ -1,5 +1,3 @@
-# 🧮 Validador de cálculos Binarios
-
 # 🔎 Algoritmos de Búsqueda y Ordenamiento en Python
 
 **Trabajo integrador de Programación I - Comisión 18**  
