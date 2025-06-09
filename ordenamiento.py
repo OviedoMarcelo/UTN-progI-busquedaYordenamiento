@@ -48,7 +48,7 @@ def insertion_sort(lista):
     #Fin del recorrido    
     fin = time.time() #obtengo el tiempo al finalizar el ordenamiento
     tiempo_ms = (fin - inicio) * 1000  # Convertierto la diferencia a milisegundos
-    print(f"Tiempo de ejecución bubble sort para {n} elementos: {tiempo_ms:.3f} ms")
+    print(f"Tiempo de ejecución insertion sort para {n} elementos: {tiempo_ms:.3f} ms")
     return lista
 
 
@@ -72,5 +72,5 @@ def selection_sort(lista):
     #Fin del recorrido
     fin = time.time() #obtengo el tiempo al finalizar el ordenamiento
     tiempo_ms = (fin - inicio) * 1000  # Convertierto la diferencia a milisegundos
-    print(f"Tiempo de ejecución bubble sort para {n} elementos: {tiempo_ms:.3f} ms")
+    print(f"Tiempo de ejecución selection sort para {n} elementos: {tiempo_ms:.3f} ms")
     return lista
