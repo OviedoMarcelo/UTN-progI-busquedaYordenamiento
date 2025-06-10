@@ -52,7 +52,7 @@ El programa está modularizado y distribuido en archivos separados:
 
 ## 🎥 Video explicativo
 
-🔗 [Enlace al video en YouTube](https://www.youtube.com/)  
+🔗 [Enlace al video en YouTube](https://youtu.be/35zvAsbhbTA)  
 Cada integrante explica el algoritmo que implementó, con enfoque tanto en la lógica como en el razonamiento matemático.
 
 
